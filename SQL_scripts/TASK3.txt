@@ -6,7 +6,7 @@ DESCRIBE TABLE DW_EXAM_DB.LOCAL.RAW_CUSTOMERS
 DESCRIBE TABLE DW_EXAM_DB.LOCAL.RAW_ORDER_ITEMS
 DESCRIBE TABLE DW_EXAM_DB.LOCAL.RAW_PAYMENTS
 
---Let me check if a dbt project already exists.
+--check if a dbt project already exists.
 ls DW_EXAM
 
 --check what account info to use for profiles.yml.
