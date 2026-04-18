@@ -1,0 +1,13 @@
+
+  create or replace   view DW_EXAM_DB.LOCAL_LOCAL.stg_customers
+  
+   as (
+    SELECT
+    CUSTOMER_ID,
+    CUSTOMER_UNIQUE_ID,
+    CUSTOMER_ZIP_CODE_PREFIX,
+    CUSTOMER_CITY,
+    CUSTOMER_STATE
+FROM DW_EXAM_DB.LOCAL.RAW_CUSTOMERS
+  );
+

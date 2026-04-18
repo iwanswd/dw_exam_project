@@ -1,0 +1,25 @@
+
+    
+    
+
+with child as (
+    select PRODUCT_ID as from_field
+    from DW_EXAM_DB.LOCAL_MARTS.fact_sales
+    where PRODUCT_ID is not null
+),
+
+parent as (
+    select PRODUCT_ID as to_field
+    from DW_EXAM_DB.LOCAL_MARTS.dim_products
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+

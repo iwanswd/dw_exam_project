@@ -1,0 +1,16 @@
+
+  
+    
+
+        create or replace transient table DW_EXAM_DB.LOCAL_MARTS.dim_customers
+         as
+        (SELECT DISTINCT
+    c.CUSTOMER_ID,
+    c.CUSTOMER_UNIQUE_ID,
+    c.CUSTOMER_ZIP_CODE_PREFIX,
+    c.CUSTOMER_CITY,
+    c.CUSTOMER_STATE
+FROM DW_EXAM_DB.LOCAL_LOCAL.stg_customers c
+        );
+      
+  

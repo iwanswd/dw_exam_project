@@ -1,0 +1,12 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "iwanswd"
+      user: "iwanswd"
+      role: ACCOUNTADMIN
+      database: DW_EXAM_DB
+      warehouse: COMPUTE_WH
+      schema: LOCAL
+      threads: 4

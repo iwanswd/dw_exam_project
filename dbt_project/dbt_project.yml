@@ -1,0 +1,15 @@
+name: 'dw_exam'
+version: '1.0.0'
+
+profile: 'default'
+
+model-paths: ["models"]
+
+models:
+  dw_exam:
+    staging:
+      +materialized: view
+      +schema: LOCAL
+    marts:
+      +materialized: table
+      +schema: MARTS

@@ -1,0 +1,17 @@
+
+  
+    
+
+        create or replace transient table DW_EXAM_DB.LOCAL_MARTS.dim_products
+         as
+        (SELECT DISTINCT
+    p.PRODUCT_ID,
+    p.PRODUCT_CATEGORY_NAME,
+    p.PRODUCT_WEIGHT_G,
+    p.PRODUCT_LENGTH_CM,
+    p.PRODUCT_HEIGHT_CM,
+    p.PRODUCT_WIDTH_CM
+FROM DW_EXAM_DB.LOCAL_LOCAL.stg_products p
+        );
+      
+  
