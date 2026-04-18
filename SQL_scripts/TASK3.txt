@@ -13,13 +13,12 @@ ls DW_EXAM
 SELECT CURRENT_ACCOUNT() AS ACCOUNT, CURRENT_USER() AS USERNAME, CURRENT_ROLE() AS ROLE, CURRENT_WAREHOUSE() AS WAREHOUSE
 
 -- 1 Create dbt project structure (dbt_project.yml, profiles.yml, packages.yml)
--- 2 Create staging models: stg_orders.sql, stg_customers.sql, stg_products.sql + schema.yml
--- 3 Create marts models: dim_customers.sql, dim_products.sql, fact_sales.sql + schema.yml
--- 4 Create sources.yml for raw tables
+--   Create staging models: stg_orders.sql, stg_customers.sql, stg_products.sql + schema.yml
+--   Create marts models: dim_customers.sql, dim_products.sql, fact_sales.sql + schema.yml
+--   Create sources.yml for raw tables
 CREATE SCHEMA IF NOT EXISTS DW_EXAM_DB.MARTS
 
--- 5 Run dbt deps and dbt build to verify
---Install dbt dependencies:
+-- 2 Run dbt deps and dbt build to verify
 dbt deps --project-dir /dbt_project
 
 --Build all dbt models and run tests
