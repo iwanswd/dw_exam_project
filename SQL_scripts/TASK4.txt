@@ -1,0 +1,20 @@
+--Task 4
+--Check existing model structure
+ls -R /dbt_project/models
+
+--Check DW_EXAM directory structure
+ls -R /DW_EXAM
+
+dbt test --project-dir /DW_EXAM/TASK3/dbt_project
+
+--Build and test all dbt models
+dbt build --project-dir /DW_EXAM/TASK3/dbt_project
+
+
+
+
+
+
+
+
+
